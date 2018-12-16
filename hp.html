@@ -1,0 +1,388 @@
+
+
+
+<html>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<body>
+
+<style>
+#title{
+	text-align:center;
+	margin:auto;
+  color:#00006c;
+  font-size:70px;
+  
+	}
+#title-caption{
+	text-align:center;
+	margin:auto;
+  color:#00006c;
+  font-size:40px;
+	}
+#main-table{
+	background-color:#9bcdff;  
+  margin:auto;
+  width:100%;
+  
+	}
+#title-table{
+  margin:auto;
+  width:100%;
+}
+#csi-logo{
+  width:200px;
+  max-width:100%;
+  margin:auto;
+}
+#ddu-logo{
+  width:200px;
+  max-width:100%;
+  margin:auto;
+  
+  
+}
+#menu-table{
+  margin:auto;
+  width:100%;
+  text-align:center;
+  background-color:#1b29e2;
+  color:#ffffff;
+  font-size:25px;
+}
+#main{
+  background-color:#2222ff;
+}
+#des{
+  background-color:#ffff9d;
+}
+#about{
+  font-size:35px;
+}
+#about-des{
+  font-size:23px;
+  
+}
+#vision{
+  font-size:35px;
+}
+#vision-des{
+  font-size:23px;
+}#mission{
+  font-size:35px;
+}
+#mission-des{
+  font-size:23px;
+}
+#event{
+  font-size:35px;
+}
+#event-des{
+  font-size:23px;
+}
+#news{
+  font-size:35px;
+}
+#news-des{
+  font-size:23px;
+}
+
+#demo{
+  font-size:23px;
+  background-color:#ffff9d;
+  color:#000000;
+}
+#table-contact{
+  font-size:23px;
+}
+#contact{
+  font-size:35px;
+}#table-contact{
+  font-size:23px;
+}
+.loader {
+  border: 12px solid #f3f3f3; 
+  border-top: 12px solid #3498db; 
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.footer{
+	left:0;
+	bottom:0;
+	width:100%;
+	background-color:#1b29e2;
+	font-size:23px;
+	color:white;
+	text-align:cener;
+}
+a{
+  color:white;
+  
+}
+li a {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color:white;
+  color:#1b29e2;
+}
+* {box-sizing:border-box}
+
+.slideshow-container {
+  max-width: 500px;
+  max-height: 250px;
+  position: relative;
+  margin:auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #8cb0ea;
+  color:#8cb0ea;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.8s ease;
+}
+
+.active, .dot:hover {
+  background-color: #3f4959;
+  color:#3f4959;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+</style>
+
+<script>
+
+
+var deadline = new Date("Jan 5, 2019 15:00:00").getTime(); 
+var x = setInterval(function() { 
+var now = new Date().getTime(); 
+var t = deadline - now; 
+var days = Math.floor(t / (1000 * 60 * 60 * 24)); 
+var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60)); 
+var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)); 
+var seconds = Math.floor((t % (1000 * 60)) / 1000); 
+document.getElementById("demo").innerHTML = days + " days "  
++ hours + " hours " + minutes + " minutes " + seconds + " seconds "; 
+    if (t < 0) { 
+        clearInterval(x); 
+        document.getElementById("demo").innerHTML = "EXPIRED"; 
+    } 
+}, 1000); 
+
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 2000); }
+</script>
+  <center>
+  <div class="loader"></div>
+</center>
+<div id="main">
+<table  id="main-table" border="0">
+<tr>
+<td><img id="csi-logo" align="left" src="http://sxcce.edu.in/web/wp-content/uploads/2017/03/csi-logo.png" ></td>
+<td>
+	<table id="title-table">
+	<tr> 
+	<td><h1 id="title">Computer Society of India</h1></td>
+	</tr>
+	<tr>
+	<td><h2 id="title-caption">DDU Student Branch</h2><td>
+	</tr>
+    </table>
+</td>
+<td><img id="ddu-logo" align="right" src="http://lh4.ggpht.com/_5d5y7bAR_ak/S0XEXGPeaNI/AAAAAAAABSs/DZ_SNlnJ7YA/DDU_logo%5B3%5D.jpg?imgmax=800"></td>
+</tr>
+
+  
+  
+
+  
+</table>
+  <table id="menu-table" border="3">
+    <tr>
+      <td><a href="#about">About Us</a></td>
+      <td><a href="#news">News</a></td>
+      <td><a href="#event">Events</a></td>
+      <td><a href="">Our Team</a></td>
+      <td><a href="#contact">Contact Us</a></td>
+    </tr>
+    </table>
+  </div>
+  
+  <div id="des">
+  <h3 id="about">About Us</h3>
+  <p id="about-des">
+    <b>Computer Society of India ( CSI)</b> is the first and largest body of computer professionals in India. It was started on 6 March 1965 by a few computer professionals and has now grown to be the national body representing computer professionals.
+    </p>
+  
+  <h3 id="vision">Vision</h3>
+  <p id="vision-des">
+    The Computer Society of India is a non-profit professional society and meet to exchange views and information learn and share ideas. The wide spectrum of members is committed to the advancement of theory and practice of Computer Engineering and Technology Systems, Science and Engineering, Information Processing and related Arts and Sciences. 
+    </p>
+  <h3 id="mission">Mission</h3>
+  <p >
+   <ul id="mission-des">
+     <li>Facilitate Research, Knowledge Sharing, Learning and Career Enhancement among all categories of IT professionals.</li>
+     <li> Inspire, nurture and assist students to integrate into the IT community.</li>
+     <li>Percolate benefits of IT advancement to all sections of Indian Society. </li>
+    </ul> 
+    </p>
+  <h3 id="event">Events</h3>
+  <p id="event-des">
+    CSI - DDU Student branch undertakes various activities like seminars, workshops, group discussions, etc. It also organizes various competetion like coding competetion, quiz competetion, etc.
+  </p>
+  
+  <div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="http://www.ddu.ac.in/images/Technology/Departments-img2.jpg" style="width:500px; height:250px;">
+  
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="https://images.static-collegedunia.com/public/college_data/images/campusimage/1422439852ddu6.JPG" style="width:500px; height:250px;">
+    
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="https://qph.fs.quoracdn.net/main-qimg-64a99fae9c584062d30290bd73be2ea6" style="width:500px; height:250px;">
+   
+  </div>
+
+ 
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+  
+  <h3 id="news">News</h3>
+  <p id="news-des">
+    Our upcoming event is the seminar on "Basic Web Development".The time remaining is  <p id="demo"></p>
+  </p>
+
+  <h3 id="contact">Contact Us</h3>
+    <table id="table-contact">
+       <tr>
+        <td>Contact number :</td>
+        <td>9913255570</td>
+        </tr>
+       <tr>
+        <td>Email Address :</td>
+        <td>dducsi2018@gmail.com</td>
+        </tr>
+</table>
+ 
+  <br>
+  <br>
+  </div>
+ 
+<div class="footer">
+  <h1 style="text-align:center; color:#9bcdff;">Computer Society of India</h1>
+  <h2 style="text-align:center; color:#9bcdff;">DDU Student Branch</h2>
+    <br>
+  SITEMAP
+  <br>
+	<ul id="footer-list">
+    <li><a href="#about">About Us</a></li>
+    <ul style="list-style-type:disc;">
+    <li><a href="#vision">Our Vision</a></li>
+    <li><a href="#mission">Mission</a></li>
+      </ul>
+    <li><a href="#event">Events</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#our-team">Our Team</a></li>
+    <li><a href="#contact">Contact Us</a></li>
+    </ul>
+  <br>
+</div>
+
+</body>
+</html>
